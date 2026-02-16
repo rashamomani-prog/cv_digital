@@ -1,6 +1,7 @@
+import 'package:cv_digital/templates/minimal_template.dart';
 import 'package:flutter/material.dart';
 import 'templates/classic_template.dart';
-import 'templates/modern_template.dart';
+import 'templates/modern_template.dart' hide ClassicTemplate;
 import 'templates/minimal_template.dart';
 
 class TemplateSelectionScreen extends StatelessWidget {
@@ -33,11 +34,14 @@ class TemplateSelectionScreen extends StatelessWidget {
         color: color,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         child: Center(
-          child: Text(title,
-              style: const TextStyle(
-                  fontSize: 22,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold)),
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontSize: 22,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ),
     );

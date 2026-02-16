@@ -1,4 +1,5 @@
 import 'package:cv_digital/providers/theme_provider.dart';
+import 'package:cv_digital/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +12,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
+  print('testing');
   runApp(const MyApp());
 }
 
@@ -48,11 +49,7 @@ class MyApp extends StatelessWidget {
                 foregroundColor: Colors.white,
               ),
             ),
-            home: const Scaffold(
-              body: Center(
-                child: Text('Firebase Initialized with ThemeProvider!'),
-              ),
-            ),
+            home: LoginScreen()
           );
         },
       ),

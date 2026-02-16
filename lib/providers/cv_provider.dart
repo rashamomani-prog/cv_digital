@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CVProvider extends ChangeNotifier {
+class CvProvider with ChangeNotifier {
   String fullName = '';
   String email = '';
   String phone = '';
+  List<String> skills = [];
+  List<ExperienceData> experiences = [];
+  List<ProjectData> projects = [];
 
-  final List<String> skills = [];
-  final List<ExperienceData> experiences = [];
-  final List<ProjectData> projects = [];
-
-  void updatePersonal({
-    String? name,
-    String? mail,
-    String? ph,
-  }) {
+  // تحديث البيانات الشخصية
+  void updatePersonal({String? name, String? mail, String? ph}) {
     if (name != null) fullName = name;
     if (mail != null) email = mail;
     if (ph != null) phone = ph;
@@ -21,7 +17,6 @@ class CVProvider extends ChangeNotifier {
   }
 
   void addSkill(String skill) {
-    if (skill.trim().isEmpty) return;
     skills.add(skill);
     notifyListeners();
   }
@@ -37,13 +32,11 @@ class CVProvider extends ChangeNotifier {
   }
 }
 
-
 class ExperienceData {
-  final String role;
-  final String company;
-  final String period;
-  final Color color;
-
+  String role;
+  String company;
+  String period;
+  Color color;
   ExperienceData({
     required this.role,
     required this.company,
@@ -53,11 +46,7 @@ class ExperienceData {
 }
 
 class ProjectData {
-  final String title;
-  final String videoPath;
-
-  ProjectData({
-    required this.title,
-    required this.videoPath,
-  });
+  String title;
+  String videoPath;
+  ProjectData({required this.title, required this.videoPath});
 }
