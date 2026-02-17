@@ -5,7 +5,7 @@ class ProjectCard extends StatefulWidget {
   final String title;
   final String videoAsset;
 
-  const ProjectCard({super.key, required this.title, required this.videoAsset});
+  const ProjectCard({super.key, required this.title, required this.videoAsset, required String image});
 
   @override
   State<ProjectCard> createState() => _ProjectCardState();

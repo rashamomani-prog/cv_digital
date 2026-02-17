@@ -132,7 +132,7 @@ class _SkillCircleState extends State<SkillCircle>
                     CircularProgressIndicator(
                       value: _animation.value,
                       strokeWidth: 8,
-                      color: Colors.deepPurple,
+                      color: Colors.pink,
                       backgroundColor: Colors.grey.shade300,
                     ),
                     Center(
