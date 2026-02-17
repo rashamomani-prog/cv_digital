@@ -8,7 +8,6 @@ class CvProvider with ChangeNotifier {
   List<ExperienceData> experiences = [];
   List<ProjectData> projects = [];
 
-  // تحديث البيانات الشخصية
   void updatePersonal({String? name, String? mail, String? ph}) {
     if (name != null) fullName = name;
     if (mail != null) email = mail;

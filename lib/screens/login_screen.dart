@@ -27,7 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (user != null) {
       if (rememberMe) {
-        // حفظ الخيار محليًا باستخدام GetStorage
         storage.write('remember', true);
       } else {
         storage.remove('remember');
@@ -42,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-    // قراءة الخيار عند بدء الشاشة
+
     final storedRemember = storage.read('remember') ?? false;
     setState(() => rememberMe = storedRemember);
   }
